@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Algorithm Efficiency Explained</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Algorithm Efficiency</h1>
+        <p class="subtitle">Understanding how algorithms perform at scale</p>
+        
+        <div class="intro-box">
+            <p>Algorithm efficiency measures how an algorithm's performance changes as the amount of data it processes increases. This concept is critical in software development because the difference between an efficient and inefficient algorithm can determine whether a system succeeds or fails with real-world data volumes.</p>
+        </div>
+        
+        <h2>Common Complexity Classes</h2>
+        
+        <div class="complexity-grid">
+            <div class="complexity-card">
+                <h4>Constant Time</h4>
+                <div class="notation">O(1)</div>
+                <p>Execution time remains constant regardless of input size. Accessing an array element by index is a typical example.</p>
+            </div>
+            
+            <div class="complexity-card">
+                <h4>Logarithmic Time</h4>
+                <div class="notation">O(log n)</div>
+                <p>Execution time grows logarithmically. Binary search demonstrates this by repeatedly dividing the search space in half.</p>
+            </div>
+            
+            <div class="complexity-card">
+                <h4>Linear Time</h4>
+                <div class="notation">O(n)</div>
+                <p>Execution time grows proportionally with input size. Searching through an unsorted list requires checking each element.</p>
+            </div>
+            
+            <div class="complexity-card">
+                <h4>Quadratic Time</h4>
+                <div class="notation">O(n²)</div>
+                <p>Execution time grows with the square of input size. Nested loops that process all pairs of elements exhibit this behavior.</p>
+            </div>
+        </div>
+        
+        <h2>Growth Rate Visualization</h2>
+        
+        <div class="graph-section">
+            <div class="graph-title">Relative time growth as input size increases</div>
+            <div class="graph-bars">
+                <div class="bar-container">
+                    <div class="bar bar1"></div>
+                    <div class="bar-label">O(1)</div>
+                </div>
+                <div class="bar-container">
+                    <div class="bar bar2"></div>
+                    <div class="bar-label">O(log n)</div>
+                </div>
+                <div class="bar-container">
+                    <div class="bar bar3"></div>
+                    <div class="bar-label">O(n)</div>
+                </div>
+                <div class="bar-container">
+                    <div class="bar bar4"></div>
+                    <div class="bar-label">O(n²)</div>
+                </div>
+            </div>
+        </div>
+        
+        <h2>Practical Examples</h2>
+        
+        <div class="comparison-section">
+            <div class="example">
+                <div class="example-title">Linear Search: Finding a contact in your phone</div>
+                <div class="example-desc">When searching for a name by scrolling through your entire contact list, you must check each entry sequentially. With 1,000 contacts, this takes approximately 1,000 checks in the worst case.</div>
+            </div>
+            
+            <div class="example">
+                <div class="example-title">Binary Search: Looking up a word in a dictionary</div>
+                <div class="example-desc">Opening to the middle page and determining whether your word comes before or after that point allows you to eliminate half the remaining pages with each step. A 1,000-page dictionary requires only about 10 checks.</div>
+            </div>
+            
+            <div class="example">
+                <div class="example-title">Nested Loops: Comparing all pairs</div>
+                <div class="example-desc">Comparing every item with every other item requires nested iteration. With 100 items, this means 10,000 comparisons. With 1,000 items, this explodes to 1,000,000 comparisons.</div>
+            </div>
+        </div>
+        
+        <h2>Real-World Impact</h2>
+        
+        <div class="impact-grid">
+            <div class="impact-card">
+                <h4>Efficient Algorithms</h4>
+                <ul>
+                    <li>Process millions of records smoothly</li>
+                    <li>Provide near-instant responses</li>
+                    <li>Scale cost-effectively</li>
+                    <li>Support growing user bases</li>
+                </ul>
+            </div>
+            
+            <div class="impact-card">
+                <h4>Inefficient Algorithms</h4>
+                <ul>
+                    <li>Slow down dramatically with data growth</li>
+                    <li>Cause system timeouts and crashes</li>
+                    <li>Require expensive hardware upgrades</li>
+                    <li>Create poor user experiences</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="conclusion">
+            <h3>Why This Matters</h3>
+            <p>The choice of algorithm directly impacts system performance, scalability, and cost. A quadratic algorithm might work fine with 100 records but become unusable with 100,000. Understanding complexity allows developers to make informed decisions that prevent performance problems before they occur.</p>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
